@@ -17,6 +17,41 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <29 30>;
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp TAB>;
+        };
+        combo_delete {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp DELETE>;
+        };
+        combo_backspace {
+            timeout-ms = <50>;
+            key-positions = <37 38>;
+            bindings = <&kp BSPC>;
+        };
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <39 40>;
+            bindings = <&kp RET>;
+        };
+        combo_scln {
+            timeout-ms = <50>;
+            key-positions = <38 39>;
+            bindings = <&kp SCLN>;
+        };
+    };
+};
 
 / {
   behaviors {
