@@ -178,11 +178,5 @@
                    LED_COLOR_ID_RED
                    LED_COLOR_ID_BLUE>;
 	};
-left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        label = "LEFT_ENCODER";
-        a-gpios = <&gpio33 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio34 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <4>;
-    };
+
 };
