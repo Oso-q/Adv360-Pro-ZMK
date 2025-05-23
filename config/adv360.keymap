@@ -14,7 +14,164 @@
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS";
+          #binding-cells = <2>;#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/stp.h>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/pointing.h>
+
+/ {
+    behaviors {
+      #include "macros.dtsi"
+      #include "version.dtsi"
+
+      hm: homerow_mods {
+          compatible = "zmk,behavior-hold-tap";
+          label = "HOMEROW_MODS";
           #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <175>;
+          flavor = "tap-preferred";
+          bindings = <&kp>, <&kp>;
+      };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <60>;
+            key-positions = <30 31>;
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <60>;
+            key-positions = <31 32>;
+            bindings = <&kp TAB>;
+        };
+        combo_delete {
+            timeout-ms = <60>;
+            key-positions = <32 33>;
+            bindings = <&kp DELETE>;
+        };
+        combo_backspace {
+            timeout-ms = <60>;
+            key-positions = <42 43>;
+            bindings = <&kp BSPC>;
+        };
+        combo_enter {
+            timeout-ms = <60>;
+            key-positions = <43 44>;
+            bindings = <&kp RET>;
+        };
+        combo_scln {
+            timeout-ms = <60>;
+            key-positions = <44 45>;
+            bindings = <&kp SEMI>;
+        };
+        combo_lpar {
+            timeout-ms = <60>;
+            key-positions = <18 19>;
+            bindings = <&kp LPAR>;
+        };
+        combo_rpar {
+            timeout-ms = <60>;
+            key-positions = <24 25>;
+            bindings = <&kp RPAR>;
+        };
+        combo_lbkt {
+            timeout-ms = <60>;
+            key-positions = <19 20>;
+            bindings = <&kp LBKT>;
+        };
+        combo_rbkt {
+            timeout-ms = <60>;
+            key-positions = <23 24>;
+            bindings = <&kp RBKT>;
+        };
+        combo_minus {
+            timeout-ms = <60>;
+            key-positions = <17 18>;
+            bindings = <&kp MINUS>;
+        };
+        combo_equal {
+            timeout-ms = <60>;
+            key-positions = <25 26>;
+            bindings = <&kp EQUAL>;
+        };
+        combo_caps_word{
+            timeout-ms = <60>;
+            key-positions = <26 27>;
+            bindings = <&caps_word>;
+        };
+    };
+};
+
+  keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+      display-name = "Base";
+      bindings = <
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                             &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS 
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                              &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+   &kp ESC   &mt LGUI A     &mt LALT S    &mt LCTRL D    &mt LSHFT F  &kp G  &none       &kp PG_DN  &kp PG_UP &kp PG_UP  &kp PG_DN          &none &kp H  &mt RSHFT J  &mt RCTRL K     &mt RALT L    &mt RGUI SEMI &kp SQT        
+   &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                                &mo 1 &mo 3                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                      &lt 2 BSPC &kp LSHFT   &mo 2  &mo 4 &kp ENTER &lt 1 SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+      >;
+    };
+    keypad {
+      display-name = "Kp";
+      bindings = <
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                                           &mo 3  &kp N6        &kp KP_NUM    &kp KP_EQUAL  &kp KP_DIVIDE     &kp KP_MULTIPLY   &kp MINUS
+        &kp TAB   &kp LPAR     &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp RPAR  &none                                                             &none  &kp LBKT      &kp RBKT      &kp LBRC      &kp RBRC           &kp PIPE          &kp BSLH
+        &kp ESC   &kp SEMI     &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp EQUAL &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL              &none  &kp BSLH      &kp LSHFT     &kp LALT      &kp LCTRL         &kp LGUI          &kp SQT
+        &kp LSHFT &kp GRAVE     &kp KP_N1  &kp KP_N2   &kp KP_N3     &kp MINUS                         &kp HOME &kp PG_UP                                &kp LBKT     &kp RBKT     &trans         &trans            &trans             &kp RSHFT   
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT              &kp N0 &kp DOT       &kp END  &kp PG_DN &kp ENTER &kp KP_N0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
+      >;
+    };
+    fn {
+      display-name = "Fn";
+      bindings = <
+        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                           &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+        &trans &kp ESC            &kp TAB            &kp HOME           &kp END            &kp INS  &none                                           &none &kp PG_DN        &kp PG_UP          &kp UP             &kp DEL            &kp BSPC   &trans
+        &trans &kp LGUI          &kp LALT          &kp LCTRL         &kp LSHIFT        &trans   &none        &trans &trans &trans &trans        &none &kp PG_UP          &kp LEFT           &kp DOWN           &kp RIGHT          &kp RETURN  &trans
+        &trans &kp LC(Z)          &kp LC(X)          &kp LC(C)          &kp LC(V)          &trans                      &trans &trans                     &kp PG_DN        &kp LC(V)          &kp LC(C)          &kp LC(X)          &kp LC(Z)  &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
+      >;
+    };
+    mod {
+      display-name = "Mod";
+      bindings = <
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none        &none        &none        &none &none &none
+        &none &none        &none        &none        &none        &none        &bootloader                                                               &bootloader            &none        &none        &none        &none &none &none
+        &studio_unlock &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &stp STP_BAT &none        &none        &none        &none &none &none
+        &none &none        &none        &none        &macro_ver   &none                                      &none &none                                                        &none        &none        &none        &none &none &none
+        &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
+      >;
+    };
+    extra1 { 
+      display-name = "Red";    
+      status = "reserved";
+    };
+
+    extra2 { 
+      display-name = "Purple";    
+      status = "reserved";
+    };
+
+    extra3 { 
+      display-name = "Cyan";    
+      status = "reserved";
+    };
+
+    extra4 { 
+      display-name = "Yellow";    
+      status = "reserved";
+    };
+  };
+};
           tapping-term-ms = <200>;
           quick_tap_ms = <175>;
           flavor = "tap-preferred";
