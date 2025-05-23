@@ -120,7 +120,7 @@
       bindings = <
         &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                           &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
         &trans &kp ESC            &kp TAB            &kp HOME           &kp END            &kp INS  &none                                           &none &kp PG_DOWN        &kp PG_UP          &kp UP             &kp DEL            &kp BSPC   &trans
-        &trans &mt LGUI A         &mt LALT S         &mt LCTRL D        &mt LSHFT F        &trans   &none        &trans &trans &trans &trans        &none &kp PG_UP          &kp LEFT           &kp DOWN           &kp RIGHT          &kp RETURN  &trans
+        &trans &kp LGUI          &kp LALT          &kp LCTRL         &kp LSHIFT        &trans   &none        &trans &trans &trans &trans        &none &kp PG_UP          &kp LEFT           &kp DOWN           &kp RIGHT          &kp RETURN  &trans
         &trans &kp LC(Z)          &kp LC(X)          &kp LC(C)          &kp LC(V)          &trans                      &trans &trans                     &kp PG_DOWN        &kp LC(V)          &kp LC(C)          &kp LC(X)          &kp LC(Z)  &trans
         &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
       >;
