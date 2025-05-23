@@ -21,7 +21,75 @@
           bindings = <&kp>, <&kp>;
       };
     };
-
+    
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <60>;
+            key-positions = <30 31>;
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <60>;
+            key-positions = <31 32>;
+            bindings = <&kp TAB>;
+        };
+        combo_delete {
+            timeout-ms = <60>;
+            key-positions = <32 33>;
+            bindings = <&kp DELETE>;
+        };
+        combo_backspace {
+            timeout-ms = <60>;
+            key-positions = <42 43>;
+            bindings = <&kp BSPC>;
+        };
+        combo_enter {
+            timeout-ms = <60>;
+            key-positions = <43 44>;
+            bindings = <&kp RET>;
+        };
+        combo_scln {
+            timeout-ms = <60>;
+            key-positions = <44 45>;
+            bindings = <&kp SEMI>;
+        };
+        combo_lpar {
+            timeout-ms = <60>;
+            key-positions = <18 19>;
+            bindings = <&kp LPAR>;
+        };
+        combo_rpar {
+            timeout-ms = <60>;
+            key-positions = <24 25>;
+            bindings = <&kp RPAR>;
+        };
+        combo_lbkt {
+            timeout-ms = <60>;
+            key-positions = <19 20>;
+            bindings = <&kp LBKT>;
+        };
+        combo_rbkt {
+            timeout-ms = <60>;
+            key-positions = <23 24>;
+            bindings = <&kp RBKT>;
+        };
+        combo_minus {
+            timeout-ms = <60>;
+            key-positions = <17 18>;
+            bindings = <&kp MINUS>;
+        };
+        combo_equal {
+            timeout-ms = <60>;
+            key-positions = <25 26>;
+            bindings = <&kp EQUAL>;
+        };
+        combo_caps_word{
+            timeout-ms = <60>;
+            key-positions = <26 27>;
+            bindings = <&caps_word>;
+        };
+    };
   keymap {
     compatible = "zmk,keymap";
 
