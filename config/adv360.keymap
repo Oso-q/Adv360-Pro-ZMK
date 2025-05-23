@@ -30,7 +30,7 @@
         };
         combo_tab {
             timeout-ms = <60>;
-            key-positions = <17 18>;
+            key-positions = <16 17>;
             bindings = <&kp TAB>;
         };
         combo_delete {
