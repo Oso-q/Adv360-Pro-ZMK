@@ -27,79 +27,79 @@
             timeout-ms = <60>;
             key-positions = <29 30>;
             bindings = <&kp ESC>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 1 2 3 4>;
         };
         combo_tab {
             timeout-ms = <60>;
             key-positions = <30 31>;
             bindings = <&kp TAB>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 1 2 3 4>;
         };
         combo_delete {
             timeout-ms = <60>;
             key-positions = <31 32>;
             bindings = <&kp DELETE>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_backspace {
             timeout-ms = <60>;
             key-positions = <41 42>;
             bindings = <&kp BSPC>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_enter {
             timeout-ms = <60>;
             key-positions = <43 44>;
             bindings = <&kp RET>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_scln {
             timeout-ms = <60>;
             key-positions = <42 43>;
             bindings = <&kp SEMI>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_lpar {
             timeout-ms = <60>;
             key-positions = <17 18>;
             bindings = <&kp LPAR>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_rpar {
             timeout-ms = <60>;
             key-positions = <23 24>;
             bindings = <&kp RPAR>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_lbkt {
             timeout-ms = <60>;
             key-positions = <18 19>;
             bindings = <&kp LBKT>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_rbkt {
             timeout-ms = <60>;
             key-positions = <22 23>;
             bindings = <&kp RBKT>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_minus {
             timeout-ms = <60>;
             key-positions = <16 17>;
             bindings = <&kp MINUS>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_equal {
             timeout-ms = <60>;
             key-positions = <24 25>;
             bindings = <&kp EQUAL>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
         combo_caps_word{
             timeout-ms = <60>;
             key-positions = <32 37>;
             bindings = <&kp CAPSLOCK>;
-            layers = <0 1 2 3 4 5>; 
+            layers = <0 1 2 3 4>; 
         };
     };
   keymap {
